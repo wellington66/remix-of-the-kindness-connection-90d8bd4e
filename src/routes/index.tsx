@@ -810,28 +810,28 @@ function SocialProof() {
 function DailyMenu() {
   const meals = [
     {
-      icon: "☀️",
-      time: "Café da manhã",
-      title: "Começar com variedade",
-      description: "Fruta macia, mingau ou uma opção simples adaptada à fase do bebê.",
+      icon: "🍱",
+      time: "Preparo Único",
+      title: "O dia de organizar",
+      description: "Um dia da semana dedicado a montar as marmitinhas para economizar horas na cozinha.",
     },
     {
-      icon: "🍲",
-      time: "Almoço",
-      title: "Um pratinho completo",
-      description: "Cereal ou tubérculo, feijão, proteína e legumes em texturas adequadas.",
+      icon: "❄️",
+      time: "Congelamento",
+      title: "Praticidade no freezer",
+      description: "Técnicas seguras para congelar e descongelar, mantendo o sabor e os nutrientes.",
     },
     {
-      icon: "🍌",
-      time: "Lanche",
-      title: "Prático sem ser repetitivo",
-      description: "Frutas e combinações naturais para apresentar novos sabores ao longo da semana.",
+      icon: "⏱️",
+      time: "Durante a semana",
+      title: "Refeições em minutos",
+      description: "Basta aquecer a marmitinha certa para o horário e oferecer ao seu bebê.",
     },
     {
-      icon: "🌙",
-      time: "Jantar",
-      title: "A comida da família adaptada",
-      description: "Uma refeição simples, organizada e ajustada ao momento do seu bebê.",
+      icon: "🥗",
+      time: "Variedade Real",
+      title: "Comida de verdade",
+      description: "Garante que o bebê coma bem todos os dias, sem você precisar cozinhar do zero.",
     },
   ];
 
@@ -839,16 +839,15 @@ function DailyMenu() {
     <section className="container-page relative overflow-hidden border-y-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/60 to-background py-12 shadow-[0_28px_80px_-48px_rgba(76,56,38,0.55)] sm:rounded-[2.5rem] sm:border-2 sm:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <span className="inline-flex rounded-full border border-primary/25 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur">
-          O que você vai encontrar
+          Praticidade Semanal
         </span>
         <h2 className="mt-6 font-serif text-[2.65rem] leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-          Um dia inteiro resolvido,
+          Sua semana resolvida em
           <br />
-          <span className="italic text-primary">refeição por refeição.</span>
+          <span className="italic text-primary">um único dia.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Mais do que receitas soltas: ideias organizadas para você saber o que oferecer do café da manhã
-          ao jantar, sempre respeitando a fase e o ritmo do seu bebê.
+          Aprenda a organizar um único dia de preparo para garantir as refeições da semana inteira. Foque em congelar as marmitinhas e ter sempre comida saudável pronta para o seu bebê.
         </p>
       </div>
 
@@ -868,9 +867,9 @@ function DailyMenu() {
             Planejamento prático
           </span>
           <div className="absolute inset-x-0 bottom-0 p-6 text-background sm:p-8">
-            <p className="font-serif text-3xl leading-tight sm:text-4xl">Prepare com mais clareza.</p>
+            <p className="font-serif text-3xl leading-tight sm:text-4xl">Cozinhe uma vez, relaxe a semana toda.</p>
             <p className="mt-2 max-w-lg text-sm leading-relaxed text-background/75">
-              Consulte o guia, escolha as refeições e organize a rotina sem precisar começar do zero todos os dias.
+              O segredo está em preparar porções estratégicas e congelar as marmitinhas com segurança.
             </p>
           </div>
         </div>
