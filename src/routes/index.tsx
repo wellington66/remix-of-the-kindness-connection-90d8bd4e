@@ -1438,9 +1438,61 @@ function Offer() {
           </p>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-2xl gap-6">
+        <div className="mx-auto mt-8 grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-start">
+          {/* ─── Oferta Básica — Somente Guia + 30 Receitas ─── */}
+          <div id="oferta-basica" className="relative flex flex-col rounded-[2rem] border border-border bg-card/50 p-6 shadow-sm transition-all sm:rounded-[2.5rem] lg:order-2">
+            <div className="mb-4 flex items-center justify-between">
+              <span className="inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                Opção Econômica
+              </span>
+            </div>
+
+            <h3 className="font-serif text-2xl leading-tight">
+              Guia Introdução Alimentar <br />
+              <span className="text-muted-foreground">+ 30 Receitas</span>
+            </h3>
+            
+            <p className="mt-4 text-sm text-muted-foreground">
+              Apenas o essencial para quem quer começar com o básico. Não inclui os bônus exclusivos nem o acervo completo de receitas.
+            </p>
+
+            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-primary" /> Guia de Introdução Alimentar
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-primary" /> 30 receitas selecionadas
+              </li>
+              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
+                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem 250+ receitas completas
+              </li>
+              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
+                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem Cardápio Semanal
+              </li>
+              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
+                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem Lista de Compras
+              </li>
+            </ul>
+
+            <div className="mt-auto pt-8 text-center">
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Por apenas</p>
+              <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
+              
+              <a
+                href="https://pay.cakto.com.br/basico"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-muted py-4 text-sm font-bold uppercase tracking-widest text-muted-foreground transition-all hover:bg-muted/80"
+              >
+                Escolher Básico
+              </a>
+              
+              <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary">
+                💡 A oferta de R$ 29,90 é mais vantajosa!
+              </p>
+            </div>
+          </div>
+
           {/* ─── Oferta única — Kit Completo ─── */}
-          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_40px_100px_-45px_color-mix(in_oklab,var(--cta)_35%,transparent)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8">
+          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_40px_100px_-45px_color-mix(in_oklab,var(--cta)_35%,transparent)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8 lg:order-1">
             <div className="absolute -top-5 left-1/2 w-[calc(100%-2rem)] -translate-x-1/2 rounded-2xl bg-primary px-3 py-2 text-center text-[10px] font-black uppercase leading-tight tracking-[0.16em] text-primary-foreground shadow-xl sm:w-auto sm:whitespace-nowrap sm:rounded-full sm:px-6 sm:text-[11px] sm:tracking-[0.25em]">
               ⭐ Tudo o que você precisa em um só lugar
             </div>
@@ -1459,8 +1511,7 @@ function Offer() {
               <span className="italic text-primary">6 bônus exclusivos</span>
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Guia principal, +250 receitas, cardápios e bônus estratégicos para você
-              nunca mais travar na cozinha.
+              Guia principal, acervo completo com <span className="font-bold underline text-primary">+250 receitas</span>, cardápios e bônus estratégicos.
             </p>
 
             {/* Value stack */}
