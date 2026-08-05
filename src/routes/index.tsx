@@ -1393,7 +1393,7 @@ function Offer() {
           <div className="mb-6 flex items-center justify-center gap-3">
             <div className="h-px w-10 bg-primary" />
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
-              Oferta única · R$ 29,90
+              Escolha a melhor oferta para você
             </span>
             <div className="h-px w-10 bg-primary" />
           </div>
@@ -1440,59 +1440,59 @@ function Offer() {
 
         <div className="mx-auto mt-8 grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-start">
           {/* ─── Oferta Básica — Somente Guia + 30 Receitas ─── */}
-          <div id="oferta-basica" className="relative flex flex-col rounded-[2rem] border border-border bg-card/50 p-6 shadow-sm transition-all sm:rounded-[2.5rem] lg:order-2">
+          <div id="oferta-basica" className="relative flex flex-col rounded-[2rem] border border-border bg-card p-6 shadow-md transition-all sm:rounded-[2.5rem] lg:order-2">
             <div className="mb-4 flex items-center justify-between">
-              <span className="inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                Opção Econômica
+              <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-secondary-foreground">
+                Opção Essencial
               </span>
             </div>
 
-            <h3 className="font-serif text-2xl leading-tight">
+            <h3 className="font-serif text-2xl leading-tight text-foreground">
               Guia Introdução Alimentar <br />
-              <span className="text-muted-foreground">+ 30 Receitas</span>
+              <span className="text-primary/80">+ 30 Receitas</span>
             </h3>
             
-            <p className="mt-4 text-sm text-muted-foreground">
-              Apenas o essencial para quem quer começar com o básico. Não inclui os bônus exclusivos nem o acervo completo de receitas.
+            <p className="mt-4 text-sm text-muted-foreground/90">
+              O ponto de partida ideal para quem busca praticidade com o básico da introdução alimentar.
             </p>
 
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
+            <ul className="mt-6 space-y-3 text-sm">
+              <li className="flex items-center gap-2 text-foreground/90">
                 <Check className="h-4 w-4 text-primary" /> Guia de Introdução Alimentar
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 text-foreground/90">
                 <Check className="h-4 w-4 text-primary" /> 30 receitas selecionadas
               </li>
-              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
-                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem 250+ receitas completas
+              <li className="flex items-center gap-2 text-muted-foreground/50 line-through">
+                <ArrowLeft className="h-3 w-3 rotate-180 opacity-50" /> Sem 250+ receitas completas
               </li>
-              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
-                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem Cardápio Semanal
+              <li className="flex items-center gap-2 text-muted-foreground/50 line-through">
+                <ArrowLeft className="h-3 w-3 rotate-180 opacity-50" /> Sem Cardápio Semanal
               </li>
-              <li className="flex items-center gap-2 text-destructive line-through decoration-destructive/30">
-                <ArrowLeft className="h-3 w-3 rotate-180" /> Sem Lista de Compras
+              <li className="flex items-center gap-2 text-muted-foreground/50 line-through">
+                <ArrowLeft className="h-3 w-3 rotate-180 opacity-50" /> Sem Lista de Compras
               </li>
             </ul>
 
             <div className="mt-auto pt-8 text-center">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Por apenas</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
               <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
               
               <a
                 href="https://pay.cakto.com.br/basico"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-muted py-4 text-sm font-bold uppercase tracking-widest text-muted-foreground transition-all hover:bg-muted/80"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
               >
-                Escolher Básico
+                Escolher Essencial
               </a>
               
-              <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary">
-                💡 A oferta de R$ 29,90 é mais vantajosa!
+              <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70">
+                💡 O Kit Completo por R$ 29,90 é mais vantajoso
               </p>
             </div>
           </div>
 
           {/* ─── Oferta única — Kit Completo ─── */}
-          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_40px_100px_-45px_color-mix(in_oklab,var(--cta)_35%,transparent)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8 lg:order-1">
+          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_40px_100px_-45px_color-mix(in_oklab,var(--primary)_50%,transparent)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8 lg:order-1">
             <div className="absolute -top-5 left-1/2 w-[calc(100%-2rem)] -translate-x-1/2 rounded-2xl bg-primary px-3 py-2 text-center text-[10px] font-black uppercase leading-tight tracking-[0.16em] text-primary-foreground shadow-xl sm:w-auto sm:whitespace-nowrap sm:rounded-full sm:px-6 sm:text-[11px] sm:tracking-[0.25em]">
               ⭐ Tudo o que você precisa em um só lugar
             </div>
