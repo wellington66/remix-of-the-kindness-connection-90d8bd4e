@@ -722,7 +722,7 @@ function SocialProof() {
     { n: "98%", l: "recomendariam" },
   ];
   return (
-    <section className="border-y border-border bg-secondary/40">
+    <section className="border-y border-border/40 bg-transparent">
       <div className="container-page grid grid-cols-2 gap-6 py-8 sm:grid-cols-4">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
