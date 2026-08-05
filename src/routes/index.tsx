@@ -1401,11 +1401,6 @@ function SocialProofCarousel() {
                       loading="lazy"
                     />
                     
-                    {/* Badge flutuante de verificado */}
-                    <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/90 px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-emerald-600 shadow-sm backdrop-blur-sm">
-                      <Check className="h-3 w-3" />
-                      Resultado Real
-                    </div>
                   </div>
                 </div>
               ))}
@@ -1446,18 +1441,6 @@ function SocialProofCarousel() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-2">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted ring-2 ring-primary/10 overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?u=mamae${i}&gender=female`} alt="Mamãe usuária" />
-                </div>
-              ))}
-            </div>
-            <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-              +12.400 mães transformaram sua rotina
-            </p>
-          </div>
         </div>
       </div>
     </section>
