@@ -120,7 +120,7 @@ function Landing() {
       <FAQ />
       <FooterCta />
       <Footer />
-      <WhatsAppFab />
+      
       <PurchasePopup />
       <ExitIntentPopup />
       <StayGuard />
