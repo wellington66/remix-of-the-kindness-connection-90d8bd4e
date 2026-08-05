@@ -1306,7 +1306,7 @@ function SocialProofCarousel() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + proofs.length) % proofs.length);
 
   return (
-    <section className="bg-transparent py-8 sm:py-12">
+    <section className="bg-transparent py-4 sm:py-8">
       <div className="container-page">
 
         <div className="mt-0 group relative mx-auto max-w-5xl">
@@ -1320,7 +1320,7 @@ function SocialProofCarousel() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {proofs.map((proof, idx) => (
-                <div key={idx} className="w-full shrink-0 px-4 py-4 sm:px-12">
+                <div key={idx} className="w-full shrink-0 px-2 py-2 sm:px-4">
                   <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden sm:aspect-video sm:max-w-none">
                     <img 
                       src={proof.url} 
@@ -1351,7 +1351,7 @@ function SocialProofCarousel() {
           </div>
 
           {/* Indicadores */}
-          <div className="mt-6 flex items-center justify-center gap-2">
+          <div className="mt-2 flex items-center justify-center gap-1.5">
             {proofs.map((_, idx) => (
               <button
                 key={idx}
