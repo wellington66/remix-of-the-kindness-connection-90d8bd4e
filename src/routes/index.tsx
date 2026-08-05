@@ -1383,7 +1383,7 @@ function SocialProofCarousel() {
 
         <div className="mt-0 group relative mx-auto max-w-[450px]">
           <div 
-            className="relative overflow-hidden rounded-[2.5rem] bg-[#fdfcfa] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 sm:p-6"
+            className="relative overflow-hidden transition-all duration-300"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -1392,8 +1392,8 @@ function SocialProofCarousel() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {proofs.map((proof, idx) => (
-                <div key={idx} className="w-full shrink-0 px-1">
-                  <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-2xl border border-primary/5 bg-white shadow-sm transition-transform duration-500 group-hover:scale-[1.01]">
+                <div key={idx} className="w-full shrink-0 px-2">
+                  <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-2xl border border-primary/10 shadow-sm transition-transform duration-500 group-hover:scale-[1.01]">
                     <img 
                       src={proof.url} 
                       alt={proof.alt}
@@ -1414,14 +1414,14 @@ function SocialProofCarousel() {
             {/* Setas de navegação otimizadas */}
             <button
               onClick={prev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:-left-4"
+              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white"
               aria-label="Anterior"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={next}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:-right-4"
+              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white"
               aria-label="Próximo"
             >
               <ChevronRight className="h-5 w-5" />
