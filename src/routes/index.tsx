@@ -70,8 +70,11 @@ const whatsappProofs: string[] = [
    whatsappProof7.url,
  ];
 
-// Link do Kit Completo (Oferta 2 — R$ 29,90)
-const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228";
+// Links de checkout
+const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 29,90 (Completo)
+const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 19,90 (Básico)
+const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 21,90 (Upsell)
+
 
 
 
@@ -101,6 +104,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Landing() {
+  const [showUpsell, setShowUpsell] = useState(false);
+
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <AnnouncementBar />
@@ -115,7 +120,7 @@ function Landing() {
       <Comparison />
       <WeeklyMeals />
       <SocialProofCarousel />
-      <Offer />
+      <Offer onSelectBasic={() => setShowUpsell(true)} />
       <Guarantee />
       <FAQ />
       <FooterCta />
@@ -123,11 +128,13 @@ function Landing() {
       
       <PurchasePopup />
       <ExitIntentPopup />
+      <UpsellModal open={showUpsell} setOpen={setShowUpsell} />
       <StayGuard />
       <CaktoLinkSanitizer />
     </div>
   );
 }
+
 
 function VideoSection() {
   const [showVideo, setShowVideo] = useState(false);
@@ -341,6 +348,67 @@ function ExitIntentPopup() {
     </div>
   );
 }
+
+function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) => void }) {
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-foreground/60 p-4 backdrop-blur-sm"
+      onClick={() => setOpen(false)}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        onClick={(e) => e.stopPropagation()}
+        className="relative max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded-3xl border border-border bg-card p-6 shadow-2xl sm:p-8 text-center"
+      >
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        >
+          ✕
+        </button>
+        
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <Sparkles className="h-7 w-7" />
+        </div>
+        
+        <h3 className="mt-5 font-serif text-3xl leading-tight text-foreground">
+          Aproveite esta <br />
+          <span className="italic text-primary">oferta especial</span>
+        </h3>
+        
+        <p className="mt-4 text-sm text-muted-foreground px-2">
+          Por apenas <span className="font-bold text-foreground">mais R$ 2,00</span>, você garante o <strong>Kit Completo</strong> com mais de 250 receitas e todos os bônus exclusivos.
+        </p>
+        
+        <div className="mt-8 space-y-3">
+          <a
+            href={CHECKOUT_URL_UPSELL}
+            className="flex w-full flex-col items-center justify-center rounded-2xl bg-cta px-6 py-4 text-cta-foreground shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
+          >
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-90">Opção Recomendada</span>
+            <span className="text-base font-black uppercase tracking-wider">Upgrade para Completo — R$ 21,90</span>
+          </a>
+          
+          <a
+            href={CHECKOUT_URL_BASIC}
+            className="flex w-full items-center justify-center rounded-2xl border border-border bg-muted/30 px-6 py-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-muted/50"
+          >
+            Não, prefiro o básico — R$ 19,90
+          </a>
+        </div>
+        
+        <div className="mt-6 flex items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+          <span className="flex items-center gap-1.5"><Shield className="h-3 w-3" /> Seguro</span>
+          <span className="flex items-center gap-1.5"><Lock className="h-3 w-3" /> Criptografado</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 /* ─────────────────────────────  Vagas + Popup de vendas  ───────────────────────────── */
 
@@ -1376,7 +1444,7 @@ function OfferUrgency() {
   );
 }
 
-function Offer() {
+function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
 
   const totalValue = 200; // 47+37+37+27+19+14+19
@@ -1478,12 +1546,13 @@ function Offer() {
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
               <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
               
-              <a
-                href="https://pay.cakto.com.br/basico"
+              <button
+                onClick={onSelectBasic}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
               >
                 Escolher Essencial
-              </a>
+              </button>
+
               
               <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70">
                 💡 O Kit Completo por R$ 29,90 é mais vantajoso
