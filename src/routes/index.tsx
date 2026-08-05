@@ -1337,7 +1337,7 @@ function SocialProofCarousel() {
             >
               {proofs.map((proof, idx) => (
                 <div key={idx} className="w-full shrink-0 px-4 py-4 sm:px-12">
-                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden rounded-3xl border border-border/40 shadow-xl sm:aspect-video sm:max-w-none">
+                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden rounded-2xl sm:aspect-video sm:max-w-none">
                     <img 
                       src={proof.url} 
                       alt={proof.alt}
