@@ -250,7 +250,7 @@ function CaktoLinkSanitizer() {
 
 
 // Link de checkout do pop-up de saída (R$ 21,90)
-const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/vxfqnzy";
+const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/395yy2x";
 
 function ExitIntentPopup() {
   const [open, setOpen] = useState(false);
