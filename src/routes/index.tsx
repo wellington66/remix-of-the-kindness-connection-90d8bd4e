@@ -172,7 +172,7 @@ function VideoSection() {
             {showVideo && (
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/70tlclIadc8?modestbranding=1&rel=0&showinfo=0&autoplay=0"
+                src="https://www.youtube.com/embed/70tlclIadc8?modestbranding=1&rel=0&showinfo=0&autoplay=1&mute=1"
                 title="NutriBaby Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
