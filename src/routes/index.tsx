@@ -1450,7 +1450,7 @@ function SocialProofCarousel() {
             <div className="flex -space-x-2">
               {[1, 2, 3, 4, 5].map((i) => (
                 <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted ring-2 ring-primary/10 overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Usuário" />
+                  <img src={`https://i.pravatar.cc/100?u=mamae${i}&gender=female`} alt="Mamãe usuária" />
                 </div>
               ))}
             </div>
