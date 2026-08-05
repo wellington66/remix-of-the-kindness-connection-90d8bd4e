@@ -1306,26 +1306,10 @@ function SocialProofCarousel() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + proofs.length) % proofs.length);
 
   return (
-    <section className="bg-transparent py-16 sm:py-24">
+    <section className="bg-transparent py-4">
       <div className="container-page">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 flex items-center justify-center gap-2">
-            <span className="h-px w-8 bg-primary/20" />
-            <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
-              <MessageCircle className="h-3.5 w-3.5" />
-              Provas Reais
-            </span>
-            <span className="h-px w-8 bg-primary/20" />
-          </div>
-          <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
-            O que as mamães <span className="italic text-primary">estão vivendo</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Histórias reais de quem transformou a introdução alimentar em um momento de prazer e segurança.
-          </p>
-        </div>
 
-        <div className="mt-12 group relative mx-auto max-w-5xl">
+        <div className="mt-0 group relative mx-auto max-w-5xl">
           <div 
             className="relative overflow-hidden transition-all duration-300"
             onMouseEnter={() => setIsPaused(true)}
@@ -1336,47 +1320,29 @@ function SocialProofCarousel() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {proofs.map((proof, idx) => (
-                <div key={idx} className="w-full shrink-0 px-4 py-4 sm:px-12">
-                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden rounded-2xl border border-border shadow-sm sm:aspect-video sm:max-w-none">
+                <div key={idx} className="w-full shrink-0 px-2 py-2 sm:px-4">
+                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden sm:aspect-video sm:max-w-none">
                     <img 
                       src={proof.url} 
                       alt={proof.alt}
-                      className="h-full w-full object-contain bg-white"
+                      className="h-full w-full object-contain"
                       loading="lazy"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 p-2 text-foreground/40 sm:hidden">
-                      <p className="text-[10px] font-medium italic">{proof.name}</p>
-                    </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Navegação */}
-            <button
-              onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:left-6 opacity-0 group-hover:opacity-100"
-              aria-label="Anterior"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:right-6 opacity-0 group-hover:opacity-100"
-              aria-label="Próximo"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
           </div>
 
           {/* Indicadores */}
-          <div className="mt-6 flex items-center justify-center gap-2">
+          <div className="mt-2 flex items-center justify-center gap-1.5">
             {proofs.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-1 transition-all duration-300 rounded-full ${
-                  currentIndex === idx ? "bg-primary w-6" : "bg-primary/10 w-1.5 hover:bg-primary/30"
+                className={`h-1.5 w-1.5 transition-all duration-300 rounded-full ${
+                  currentIndex === idx ? "bg-primary scale-125" : "bg-primary/20"
                 }`}
                 aria-label={`Ver slide ${idx + 1}`}
               />
