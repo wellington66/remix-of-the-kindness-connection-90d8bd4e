@@ -104,6 +104,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Landing() {
+  const [showUpsell, setShowUpsell] = useState(false);
+
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <AnnouncementBar />
@@ -118,7 +120,7 @@ function Landing() {
       <Comparison />
       <WeeklyMeals />
       <SocialProofCarousel />
-      <Offer />
+      <Offer onSelectBasic={() => setShowUpsell(true)} />
       <Guarantee />
       <FAQ />
       <FooterCta />
@@ -126,11 +128,13 @@ function Landing() {
       
       <PurchasePopup />
       <ExitIntentPopup />
+      <UpsellModal open={showUpsell} setOpen={setShowUpsell} />
       <StayGuard />
       <CaktoLinkSanitizer />
     </div>
   );
 }
+
 
 function VideoSection() {
   const [showVideo, setShowVideo] = useState(false);
