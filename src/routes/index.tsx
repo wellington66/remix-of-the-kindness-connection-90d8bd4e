@@ -1492,7 +1492,7 @@ function Offer() {
           </div>
 
           {/* ─── Oferta única — Kit Completo ─── */}
-          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_30px_70px_-30px_rgba(var(--primary),0.3)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8 lg:order-1">
+          <div id="oferta-completa" className="relative flex flex-col scroll-mt-24 rounded-[2rem] border-2 border-primary bg-card p-4 pt-8 shadow-[0_40px_100px_-45px_color-mix(in_oklab,var(--primary)_50%,transparent)] transition-transform hover:scale-[1.01] sm:rounded-[2.5rem] sm:p-8 lg:order-1">
             <div className="absolute -top-5 left-1/2 w-[calc(100%-2rem)] -translate-x-1/2 rounded-2xl bg-primary px-3 py-2 text-center text-[10px] font-black uppercase leading-tight tracking-[0.16em] text-primary-foreground shadow-xl sm:w-auto sm:whitespace-nowrap sm:rounded-full sm:px-6 sm:text-[11px] sm:tracking-[0.25em]">
               ⭐ Tudo o que você precisa em um só lugar
             </div>
