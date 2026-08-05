@@ -962,15 +962,8 @@ function Problem() {
             Sua cozinha <span className="italic text-primary">organizada</span> e seu bebê <span className="font-bold">bem nutrido.</span>
           </h2>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted overflow-hidden">
-                    <img src={`https://i.pravatar.cc/100?u=mamae${i + 20}&gender=female`} alt="Avatar" className="h-full w-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <span className="text-sm font-medium text-muted-foreground">+250 receitas testadas</span>
+            <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+              <Check className="h-4 w-4 text-primary" /> +250 receitas testadas
             </div>
             <div className="h-px w-8 bg-border sm:h-8 sm:w-px" />
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
