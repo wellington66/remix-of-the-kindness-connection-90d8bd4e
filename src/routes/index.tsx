@@ -1381,9 +1381,9 @@ function SocialProofCarousel() {
           </h2>
         </div>
 
-        <div className="mt-0 group relative mx-auto max-w-[400px]">
+        <div className="mt-0 group relative mx-auto max-w-[450px]">
           <div 
-            className="relative overflow-hidden transition-all duration-300"
+            className="relative overflow-hidden rounded-[2.5rem] bg-[#fdfcfa] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 sm:p-6"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -1392,33 +1392,71 @@ function SocialProofCarousel() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {proofs.map((proof, idx) => (
-                <div key={idx} className="w-full shrink-0 px-2">
-                  <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden">
+                <div key={idx} className="w-full shrink-0 px-1">
+                  <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-2xl border border-primary/5 bg-white shadow-sm transition-transform duration-500 group-hover:scale-[1.01]">
                     <img 
                       src={proof.url} 
                       alt={proof.alt}
                       className="h-full w-full object-contain"
                       loading="lazy"
                     />
+                    
+                    {/* Badge flutuante de verificado */}
+                    <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/90 px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-emerald-600 shadow-sm backdrop-blur-sm">
+                      <Check className="h-3 w-3" />
+                      Resultado Real
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
 
+            {/* Setas de navegação otimizadas */}
+            <button
+              onClick={prev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:-left-4"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-primary shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:-right-4"
+              aria-label="Próximo"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
 
-          {/* Indicadores */}
-          <div className="mt-2 flex items-center justify-center gap-1.5">
+          {/* Indicadores com barra de progresso */}
+          <div className="mt-6 flex items-center justify-center gap-3">
             {proofs.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-1.5 w-1.5 transition-all duration-300 rounded-full ${
-                  currentIndex === idx ? "bg-primary scale-125" : "bg-primary/20"
-                }`}
+                className="group relative h-1 flex-1 max-w-[40px] overflow-hidden rounded-full bg-primary/10 transition-all"
                 aria-label={`Ver slide ${idx + 1}`}
-              />
+              >
+                <div 
+                  className={`h-full bg-primary transition-all duration-300 ${
+                    currentIndex === idx ? "w-full" : "w-0"
+                  }`}
+                />
+              </button>
             ))}
+          </div>
+
+          <div className="mt-8 flex flex-col items-center justify-center gap-2">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted ring-2 ring-primary/10 overflow-hidden">
+                  <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Usuário" />
+                </div>
+              ))}
+            </div>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+              +12.400 mães transformaram sua rotina
+            </p>
           </div>
         </div>
       </div>
