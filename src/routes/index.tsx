@@ -1383,7 +1383,7 @@ function OfferUrgency() {
   );
 }
 
-function Offer() {
+function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
 
   const totalValue = 200; // 47+37+37+27+19+14+19
