@@ -959,7 +959,9 @@ function Problem() {
             <Zap className="h-3 w-3" /> Um cardápio que resolve a semana toda
           </span>
           <h2 className="font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
-            Sua cozinha <span className="italic text-primary">organizada</span> e seu bebê <span className="font-bold">bem nutrido.</span>
+            Seu bebê <span className="italic text-primary">comendo melhor.</span>
+            <br />
+            <span className="font-bold text-primary">Você vivendo essa fase com mais leveza.</span>
           </h2>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
