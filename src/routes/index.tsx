@@ -1519,6 +1519,8 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
             className="mx-auto w-full max-w-4xl object-contain drop-shadow-2xl bg-muted/5"
             loading="lazy"
             decoding="async"
+            width="896"
+            height="504"
           />
 
           <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
