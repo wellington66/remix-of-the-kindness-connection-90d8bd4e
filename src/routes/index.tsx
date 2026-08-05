@@ -1283,11 +1283,11 @@ function SocialProofCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const proofs = [
-    { url: "user-uploads://01.jpeg", alt: "Depoimento Renata" },
-    { url: "user-uploads://02.jpeg", alt: "Depoimento Samia" },
-    { url: "user-uploads://03.jpeg", alt: "Depoimento Feedback" },
-    { url: "user-uploads://04.jpeg", alt: "Depoimento Mamãe Gabrielly" },
-    { url: "user-uploads://Design_sem_nome_1.png", alt: "Depoimento Vitória" },
+    { url: "/img/proof-01.jpeg", alt: "Depoimento Renata" },
+    { url: "/img/proof-02.jpeg", alt: "Depoimento Samia" },
+    { url: "/img/proof-03.jpeg", alt: "Depoimento Feedback" },
+    { url: "/img/proof-04.jpeg", alt: "Depoimento Mamãe Gabrielly" },
+    { url: "/img/proof-05.png", alt: "Depoimento Vitória" },
   ];
 
   useEffect(() => {
