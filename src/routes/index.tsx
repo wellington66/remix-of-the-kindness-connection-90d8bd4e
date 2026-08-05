@@ -810,28 +810,28 @@ function SocialProof() {
 function DailyMenu() {
   const meals = [
     {
-      icon: "☀️",
-      time: "Café da manhã",
-      title: "Começar com variedade",
-      description: "Fruta macia, mingau ou uma opção simples adaptada à fase do bebê.",
+      icon: "🍱",
+      time: "Preparo Único",
+      title: "O dia de organizar",
+      description: "Um dia da semana dedicado a montar as marmitinhas para economizar horas na cozinha.",
     },
     {
-      icon: "🍲",
-      time: "Almoço",
-      title: "Um pratinho completo",
-      description: "Cereal ou tubérculo, feijão, proteína e legumes em texturas adequadas.",
+      icon: "❄️",
+      time: "Congelamento",
+      title: "Praticidade no freezer",
+      description: "Técnicas seguras para congelar e descongelar, mantendo o sabor e os nutrientes.",
     },
     {
-      icon: "🍌",
-      time: "Lanche",
-      title: "Prático sem ser repetitivo",
-      description: "Frutas e combinações naturais para apresentar novos sabores ao longo da semana.",
+      icon: "⏱️",
+      time: "Durante a semana",
+      title: "Refeições em minutos",
+      description: "Basta aquecer a marmitinha certa para o horário e oferecer ao seu bebê.",
     },
     {
-      icon: "🌙",
-      time: "Jantar",
-      title: "A comida da família adaptada",
-      description: "Uma refeição simples, organizada e ajustada ao momento do seu bebê.",
+      icon: "🥗",
+      time: "Variedade Real",
+      title: "Comida de verdade",
+      description: "Garante que o bebê coma bem todos os dias, sem você precisar cozinhar do zero.",
     },
   ];
 
