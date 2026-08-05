@@ -952,23 +952,34 @@ function Problem() {
   ];
 
   return (
-    <section className="border-y border-background/10 bg-foreground py-14 text-background sm:py-24">
+    <section className="bg-background py-14 sm:py-24">
       <div className="container-page">
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-          <h2 className="font-serif text-[2.65rem] leading-[0.95] text-background sm:text-6xl lg:text-7xl">
-            Um cardápio que resolve
-            <br />
-            <span className="italic text-primary">a semana toda.</span>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-primary mb-6">
+            <Zap className="h-3 w-3" /> Um cardápio que resolve a semana toda
+          </span>
+          <h2 className="font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
+            Sua cozinha <span className="italic text-primary">organizada</span> e seu bebê <span className="font-bold">bem nutrido.</span>
           </h2>
-          <div className="lg:pb-2">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-primary">
-              +250 receitas · organizadas por fase
-            </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-background/70">
-              Para você sair do “o que eu preparo hoje?” e oferecer variedade com mais praticidade,
-              usando ingredientes simples e orientações fáceis de acompanhar.
-            </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-2">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted overflow-hidden">
+                    <img src={`https://i.pravatar.cc/100?u=mamae${i + 20}&gender=female`} alt="Avatar" className="h-full w-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              <span className="text-sm font-medium text-muted-foreground">+250 receitas testadas</span>
+            </div>
+            <div className="h-px w-8 bg-border sm:h-8 sm:w-px" />
+            <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+              <Check className="h-4 w-4 text-primary" /> Organizada por fase
+            </div>
           </div>
+          <p className="mt-8 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Para você sair do “o que eu preparo hoje?” e oferecer variedade com mais praticidade, usando ingredientes simples e orientações fáceis de acompanhar.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
