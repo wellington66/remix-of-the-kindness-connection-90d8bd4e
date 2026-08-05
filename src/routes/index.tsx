@@ -114,7 +114,7 @@ function Landing() {
       <Hero />
       <Pillars />
       <SocialProof />
-      <DailyMenu />
+      
       <Problem />
       <Solution />
       <Comparison />
@@ -807,98 +807,6 @@ function SocialProof() {
 
 /* ─────────────────────────────  Problem (magazine editorial)  ───────────────────────────── */
 
-function DailyMenu() {
-  const meals = [
-    {
-      icon: "☀️",
-      time: "Café da manhã",
-      title: "Começar com variedade",
-      description: "Fruta macia, mingau ou uma opção simples adaptada à fase do bebê.",
-    },
-    {
-      icon: "🍲",
-      time: "Almoço",
-      title: "Um pratinho completo",
-      description: "Cereal ou tubérculo, feijão, proteína e legumes em texturas adequadas.",
-    },
-    {
-      icon: "🍌",
-      time: "Lanche",
-      title: "Prático sem ser repetitivo",
-      description: "Frutas e combinações naturais para apresentar novos sabores ao longo da semana.",
-    },
-    {
-      icon: "🌙",
-      time: "Jantar",
-      title: "A comida da família adaptada",
-      description: "Uma refeição simples, organizada e ajustada ao momento do seu bebê.",
-    },
-  ];
-
-  return (
-    <section className="container-page relative overflow-hidden border-y-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/60 to-background py-12 shadow-[0_28px_80px_-48px_rgba(76,56,38,0.55)] sm:rounded-[2.5rem] sm:border-2 sm:py-24">
-      <div className="mx-auto max-w-3xl text-center">
-        <span className="inline-flex rounded-full border border-primary/25 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur">
-          O que você vai encontrar
-        </span>
-        <h2 className="mt-6 font-serif text-[2.65rem] leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-          Um dia inteiro resolvido,
-          <br />
-          <span className="italic text-primary">refeição por refeição.</span>
-        </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Mais do que receitas soltas: ideias organizadas para você saber o que oferecer do café da manhã
-          ao jantar, sempre respeitando a fase e o ritmo do seu bebê.
-        </p>
-      </div>
-
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
-        <div className="group relative min-h-[440px] overflow-hidden rounded-[2rem] border-2 border-primary/20 bg-card shadow-2xl sm:min-h-[560px]">
-          <img
-            src="/img/rotina-refeicoes.jpeg"
-            alt="Refeições variadas preparadas e organizadas em recipientes de vidro"
-            width={1450}
-            height={1086}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/10 to-transparent" />
-          <span className="absolute left-5 top-5 rounded-full bg-background/95 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-foreground shadow-lg backdrop-blur">
-            Planejamento prático
-          </span>
-          <div className="absolute inset-x-0 bottom-0 p-6 text-background sm:p-8">
-            <p className="font-serif text-3xl leading-tight sm:text-4xl">Prepare com mais clareza.</p>
-            <p className="mt-2 max-w-lg text-sm leading-relaxed text-background/75">
-              Consulte o guia, escolha as refeições e organize a rotina sem precisar começar do zero todos os dias.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          {meals.map((meal, index) => (
-            <article
-              key={meal.time}
-              className="group relative overflow-hidden rounded-[1.75rem] border border-primary/15 bg-background/90 p-6 shadow-md backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
-            >
-              <div className="flex items-center justify-between">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-2xl">{meal.icon}</span>
-                <span className="font-serif text-4xl text-primary/20">0{index + 1}</span>
-              </div>
-              <p className="mt-6 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">{meal.time}</p>
-              <h3 className="mt-2 font-serif text-2xl leading-tight">{meal.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{meal.description}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-
-      <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground">
-        As sugestões devem ser adaptadas à idade, ao desenvolvimento e às orientações do pediatra ou nutricionista do bebê.
-      </p>
-    </section>
-  );
-}
 
 function Problem() {
   const recipes = [
