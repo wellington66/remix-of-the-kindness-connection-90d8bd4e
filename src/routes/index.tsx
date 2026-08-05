@@ -114,7 +114,7 @@ function Landing() {
       <Hero />
       <Pillars />
       <SocialProof />
-      <DailyMenu />
+      
       <Problem />
       <Solution />
       <Comparison />
