@@ -1344,8 +1344,8 @@ function SocialProofCarousel() {
                       className="h-full w-full object-contain bg-white"
                       loading="lazy"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white sm:hidden">
-                      <p className="text-xs font-semibold opacity-90">{proof.name}</p>
+                    <div className="absolute bottom-2 left-2 right-2 p-2 text-foreground/40 sm:hidden">
+                      <p className="text-[10px] font-medium italic">{proof.name}</p>
                     </div>
                   </div>
                 </div>
