@@ -954,22 +954,12 @@ function Problem() {
   return (
     <section className="bg-background py-14 sm:py-24">
       <div className="container-page">
-        <div className="mx-auto max-w-4xl text-center mb-16">
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-orange-500 animate-pulse" /> 50% OFF NESTA OFERTA
-            </span>
-            <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
-              <div className="flex text-orange-400">
-                {[1, 2, 3, 4, 5].map((i) => <Star key={i} className="h-3 w-3 fill-current" />)}
-              </div>
-              +12.400 MÃES APROVARAM
-            </div>
-          </div>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-primary mb-6">
+            <Zap className="h-3 w-3" /> Um cardápio que resolve a semana toda
+          </span>
           <h2 className="font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
-            Seu bebê <span className="italic text-primary">comendo melhor.</span>
-            <br />
-            <span className="font-bold text-primary">Você vivendo essa fase com mais leveza.</span>
+            Sua cozinha <span className="italic text-primary">organizada</span> e seu bebê <span className="font-bold">bem nutrido.</span>
           </h2>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
