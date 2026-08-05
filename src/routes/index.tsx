@@ -110,6 +110,7 @@ function Landing() {
       <Solution />
       <Comparison />
       <WeeklyMeals />
+      <SocialProofCarousel />
       <Offer />
       <Guarantee />
       <FAQ />
@@ -1275,7 +1276,73 @@ function WeeklyMeals() {
   );
 }
 
-/* ─────────────────────────────  Testimonials  ───────────────────────────── */
+/* ─────────────────────────────  Social Proof Carousel  ───────────────────────────── */
+
+function SocialProofCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const proofs = [
+    { url: "user-uploads://01.jpeg", alt: "Depoimento Renata" },
+    { url: "user-uploads://02.jpeg", alt: "Depoimento Samia" },
+    { url: "user-uploads://03.jpeg", alt: "Depoimento Feedback" },
+    { url: "user-uploads://04.jpeg", alt: "Depoimento Mamãe Gabrielly" },
+    { url: "user-uploads://Design_sem_nome_1.png", alt: "Depoimento Vitória" },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % proofs.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [proofs.length]);
+
+  return (
+    <section className="bg-background py-12">
+      <div className="container-page">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
+            O que as mamães estão dizendo
+          </span>
+          <h2 className="mt-3 font-serif text-3xl leading-tight sm:text-4xl italic">
+            Transformando a vida de milhares de famílias
+          </h2>
+        </div>
+
+        <div className="mt-10 relative overflow-hidden rounded-[2rem] border border-border bg-card shadow-xl">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {proofs.map((proof, idx) => (
+              <div key={idx} className="w-full shrink-0 aspect-[9/16] sm:aspect-video flex items-center justify-center p-4">
+                <img 
+                  src={proof.url} 
+                  alt={proof.alt}
+                  className="h-full w-full object-contain rounded-xl"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
+            {proofs.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2 w-2 rounded-full transition-all ${
+                  currentIndex === idx ? "bg-primary w-6" : "bg-primary/20"
+                }`}
+                aria-label={`Ir para slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 /* ─────────────────────────────  Offer — oferta única  ───────────────────────────── */
 
