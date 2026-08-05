@@ -1501,14 +1501,6 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
             decoding="async"
           />
 
-          <img 
-            src={bookColecao.url} 
-            alt="Kit Completo NutriBaby"
-            className="mx-auto w-full max-w-sm rounded-[2rem] shadow-2xl transition-transform hover:scale-105"
-            loading="lazy"
-            decoding="async"
-          />
-
           <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
             Tudo o que vem no Kit Completo →
           </p>
