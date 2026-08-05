@@ -1306,10 +1306,15 @@ function SocialProofCarousel() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + proofs.length) % proofs.length);
 
   return (
-    <section className="bg-transparent py-4">
+    <section className="bg-transparent py-12 sm:py-20">
       <div className="container-page">
+        <div className="mx-auto max-w-4xl text-center mb-10">
+          <h2 className="font-serif text-3xl leading-tight sm:text-4xl">
+            O que as mamães <span className="italic text-primary">estão vivendo</span>
+          </h2>
+        </div>
 
-        <div className="mt-0 group relative mx-auto max-w-5xl">
+        <div className="mt-0 group relative mx-auto max-w-[400px]">
           <div 
             className="relative overflow-hidden transition-all duration-300"
             onMouseEnter={() => setIsPaused(true)}
@@ -1320,8 +1325,8 @@ function SocialProofCarousel() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {proofs.map((proof, idx) => (
-                <div key={idx} className="w-full shrink-0 px-2 py-2 sm:px-4">
-                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden sm:aspect-video sm:max-w-none">
+                <div key={idx} className="w-full shrink-0 px-2">
+                  <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden">
                     <img 
                       src={proof.url} 
                       alt={proof.alt}
