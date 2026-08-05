@@ -1478,12 +1478,12 @@ function Offer() {
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
               <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
               
-              <a
-                href="https://pay.cakto.com.br/basico"
+              <button
+                onClick={() => window.dispatchEvent(new CustomEvent("nb:exit-intent"))}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
               >
                 Escolher Essencial
-              </a>
+              </button>
               
               <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70">
                 💡 O Kit Completo por R$ 29,90 é mais vantajoso
