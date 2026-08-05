@@ -172,7 +172,7 @@ function VideoSection() {
             {showVideo && (
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/70tlclIadc8?modestbranding=1&rel=0&showinfo=0&autoplay=0"
+                src="https://www.youtube.com/embed/70tlclIadc8?modestbranding=1&rel=0&showinfo=0&autoplay=1&mute=1"
                 title="NutriBaby Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -1519,6 +1519,8 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
             className="mx-auto w-full max-w-4xl object-contain drop-shadow-2xl bg-muted/5"
             loading="lazy"
             decoding="async"
+            width="896"
+            height="504"
           />
 
           <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
