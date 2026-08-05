@@ -1583,16 +1583,21 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
               <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
               
-              <button
-                onClick={onSelectBasic}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
-              >
-                Escolher Essencial
-              </button>
+              <div className="mt-2 flex flex-col items-center gap-1.5">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-destructive/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-destructive animate-pulse">
+                  <Star className="h-3 w-3 fill-destructive" /> 98% preferem a oferta abaixo
+                </span>
+                
+                <button
+                  onClick={onSelectBasic}
+                  className="inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
+                >
+                  Escolher Essencial
+                </button>
+              </div>
 
-              
-              <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70">
-                💡 O Kit Completo por R$ 29,90 é mais vantajoso
+              <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70 italic">
+                💡 O Kit Completo por R$ 29,90 é muito mais vantajoso
               </p>
             </div>
           </div>
