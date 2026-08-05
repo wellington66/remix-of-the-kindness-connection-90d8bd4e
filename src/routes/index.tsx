@@ -103,6 +103,21 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+// Lazy load components that are not immediately visible above the fold
+const Pillars = lazy(() => import("./index").then(m => ({ default: m.Pillars })));
+const SocialProof = lazy(() => import("./index").then(m => ({ default: m.SocialProof })));
+const DailyMenu = lazy(() => import("./index").then(m => ({ default: m.DailyMenu })));
+const Problem = lazy(() => import("./index").then(m => ({ default: m.Problem })));
+const Solution = lazy(() => import("./index").then(m => ({ default: m.Solution })));
+const Comparison = lazy(() => import("./index").then(m => ({ default: m.Comparison })));
+const WeeklyMeals = lazy(() => import("./index").then(m => ({ default: m.WeeklyMeals })));
+const SocialProofCarousel = lazy(() => import("./index").then(m => ({ default: m.SocialProofCarousel })));
+const Offer = lazy(() => import("./index").then(m => ({ default: m.Offer })));
+const Guarantee = lazy(() => import("./index").then(m => ({ default: m.Guarantee })));
+const FAQ = lazy(() => import("./index").then(m => ({ default: m.FAQ })));
+const FooterCta = lazy(() => import("./index").then(m => ({ default: m.FooterCta })));
+const Footer = lazy(() => import("./index").then(m => ({ default: m.Footer })));
+
 function Landing() {
   const [showUpsell, setShowUpsell] = useState(false);
 
@@ -112,19 +127,21 @@ function Landing() {
       <Nav />
       <VideoSection />
       <Hero />
-      <Pillars />
-      <SocialProof />
-      <DailyMenu />
-      <Problem />
-      <Solution />
-      <Comparison />
-      <WeeklyMeals />
-      <SocialProofCarousel />
-      <Offer onSelectBasic={() => setShowUpsell(true)} />
-      <Guarantee />
-      <FAQ />
-      <FooterCta />
-      <Footer />
+      <Suspense fallback={<div className="h-40 animate-pulse bg-muted/20" />}>
+        <Pillars />
+        <SocialProof />
+        <DailyMenu />
+        <Problem />
+        <Solution />
+        <Comparison />
+        <WeeklyMeals />
+        <SocialProofCarousel />
+        <Offer onSelectBasic={() => setShowUpsell(true)} />
+        <Guarantee />
+        <FAQ />
+        <FooterCta />
+        <Footer />
+      </Suspense>
       
       <PurchasePopup />
       <ExitIntentPopup />
