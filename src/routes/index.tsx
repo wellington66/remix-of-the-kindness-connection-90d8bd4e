@@ -1333,21 +1333,6 @@ function SocialProofCarousel() {
               ))}
             </div>
 
-            {/* Navegação */}
-            <button
-              onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:left-6 opacity-0 group-hover:opacity-100"
-              aria-label="Anterior"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:right-6 opacity-0 group-hover:opacity-100"
-              aria-label="Próximo"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
           </div>
 
           {/* Indicadores */}
