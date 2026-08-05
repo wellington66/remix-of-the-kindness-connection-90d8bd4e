@@ -70,8 +70,11 @@ const whatsappProofs: string[] = [
    whatsappProof7.url,
  ];
 
-// Link do Kit Completo (Oferta 2 — R$ 29,90)
-const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228";
+// Links de checkout
+const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 29,90 (Completo)
+const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 19,90 (Básico)
+const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 21,90 (Upsell)
+
 
 
 
