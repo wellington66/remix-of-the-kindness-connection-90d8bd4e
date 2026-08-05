@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
+  ArrowLeft,
   ArrowRight,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Clock,
   Flame,
   Gift,
   Leaf,
   Lock,
+  MessageCircle,
   Shield,
   Sparkles,
   Star,
@@ -1280,60 +1284,101 @@ function WeeklyMeals() {
 
 function SocialProofCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   const proofs = [
-    { url: "/img/proof-01.jpeg", alt: "Depoimento Renata" },
-    { url: "/img/proof-02.jpeg", alt: "Depoimento Samia" },
-    { url: "/img/proof-03.jpeg", alt: "Depoimento Feedback" },
-    { url: "/img/proof-04.jpeg", alt: "Depoimento Mamãe Gabrielly" },
-    { url: "/img/proof-05.png", alt: "Depoimento Vitória" },
+    { url: "/img/proof-01.jpeg", alt: "Depoimento Renata", name: "Renata Pereira" },
+    { url: "/img/proof-02.jpeg", alt: "Depoimento Samia", name: "Samia Monteiro" },
+    { url: "/img/proof-03.jpeg", alt: "Depoimento Feedback", name: "Feedback Instagram" },
+    { url: "/img/proof-04.jpeg", alt: "Depoimento Mamãe Gabrielly", name: "Mamãe Gabrielly" },
+    { url: "/img/proof-05.png", alt: "Depoimento Vitória", name: "Vitória - Superação" },
   ];
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % proofs.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [proofs.length]);
+  }, [proofs.length, isPaused]);
+
+  const next = () => setCurrentIndex((prev) => (prev + 1) % proofs.length);
+  const prev = () => setCurrentIndex((prev) => (prev - 1 + proofs.length) % proofs.length);
 
   return (
-    <section className="bg-background py-12">
+    <section className="bg-[#FAF9F6] py-16 sm:py-24">
       <div className="container-page">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
-            O que as mamães estão dizendo
-          </span>
-          <h2 className="mt-3 font-serif text-3xl leading-tight sm:text-4xl italic">
-            Transformando a vida de milhares de famílias
+          <div className="mb-4 flex items-center justify-center gap-2">
+            <span className="h-1 w-8 rounded-full bg-primary/20" />
+            <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+              <MessageCircle className="h-3.5 w-3.5" />
+              Provas Reais
+            </span>
+            <span className="h-1 w-8 rounded-full bg-primary/20" />
+          </div>
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+            O que as mamães <span className="italic text-primary">estão vivendo</span>
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Histórias reais de quem transformou a introdução alimentar em um momento de prazer e segurança.
+          </p>
         </div>
 
-        <div className="mt-10 relative overflow-hidden rounded-[2rem] border border-border bg-card shadow-xl">
+        <div className="mt-12 group relative mx-auto max-w-5xl">
           <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            className="relative overflow-hidden rounded-[2.5rem] border border-border/50 bg-card shadow-2xl transition-all duration-300 hover:shadow-primary/5"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            {proofs.map((proof, idx) => (
-              <div key={idx} className="w-full shrink-0 aspect-[9/16] sm:aspect-video flex items-center justify-center p-4">
-                <img 
-                  src={proof.url} 
-                  alt={proof.alt}
-                  className="h-full w-full object-contain rounded-xl"
-                />
-              </div>
-            ))}
+            <div 
+              className="flex transition-transform duration-700 cubic-bezier(0.4, 0, 0.2, 1)"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {proofs.map((proof, idx) => (
+                <div key={idx} className="w-full shrink-0 px-4 py-8 sm:px-12 sm:py-12">
+                  <div className="relative mx-auto aspect-[9/16] max-w-[320px] overflow-hidden rounded-2xl shadow-xl ring-8 ring-muted/20 sm:aspect-video sm:max-w-none">
+                    <img 
+                      src={proof.url} 
+                      alt={proof.alt}
+                      className="h-full w-full object-contain bg-zinc-50"
+                      loading="lazy"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white sm:hidden">
+                      <p className="text-xs font-semibold opacity-90">{proof.name}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navegação */}
+            <button
+              onClick={prev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:left-8 opacity-0 group-hover:opacity-100"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:right-8 opacity-0 group-hover:opacity-100"
+              aria-label="Próximo"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
           </div>
 
-          <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
+          {/* Indicadores */}
+          <div className="mt-8 flex items-center justify-center gap-3">
             {proofs.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-2 w-2 rounded-full transition-all ${
-                  currentIndex === idx ? "bg-primary w-6" : "bg-primary/20"
+                className={`h-1.5 transition-all duration-300 rounded-full ${
+                  currentIndex === idx ? "bg-primary w-8" : "bg-primary/20 w-4 hover:bg-primary/40"
                 }`}
-                aria-label={`Ir para slide ${idx + 1}`}
+                aria-label={`Ver slide ${idx + 1}`}
               />
             ))}
           </div>
