@@ -1370,13 +1370,13 @@ function SocialProofCarousel() {
           </div>
 
           {/* Indicadores */}
-          <div className="mt-8 flex items-center justify-center gap-3">
+          <div className="mt-6 flex items-center justify-center gap-2">
             {proofs.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-1.5 transition-all duration-300 rounded-full ${
-                  currentIndex === idx ? "bg-primary w-8" : "bg-primary/20 w-4 hover:bg-primary/40"
+                className={`h-1 transition-all duration-300 rounded-full ${
+                  currentIndex === idx ? "bg-primary w-6" : "bg-primary/10 w-1.5 hover:bg-primary/30"
                 }`}
                 aria-label={`Ver slide ${idx + 1}`}
               />
