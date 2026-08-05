@@ -1306,7 +1306,7 @@ function SocialProofCarousel() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + proofs.length) % proofs.length);
 
   return (
-    <section className="bg-transparent py-4 sm:py-8">
+    <section className="bg-transparent py-4">
       <div className="container-page">
 
         <div className="mt-0 group relative mx-auto max-w-5xl">
