@@ -1355,17 +1355,17 @@ function SocialProofCarousel() {
             {/* Navegação */}
             <button
               onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:left-8 opacity-0 group-hover:opacity-100"
+              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:left-6 opacity-0 group-hover:opacity-100"
               aria-label="Anterior"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-white sm:right-8 opacity-0 group-hover:opacity-100"
+              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white/40 text-foreground/40 transition-all hover:bg-white/80 hover:text-primary sm:right-6 opacity-0 group-hover:opacity-100"
               aria-label="Próximo"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
 
