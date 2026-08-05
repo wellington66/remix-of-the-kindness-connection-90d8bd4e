@@ -250,7 +250,7 @@ function CaktoLinkSanitizer() {
 
 
 // Link de checkout do pop-up de saída (R$ 21,90)
-const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/395yy2x";
+const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/vxfqnzy";
 
 function ExitIntentPopup() {
   const [open, setOpen] = useState(false);
@@ -1478,12 +1478,12 @@ function Offer() {
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
               <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
               
-              <button
-                onClick={() => window.dispatchEvent(new CustomEvent("nb:exit-intent"))}
+              <a
+                href="https://pay.cakto.com.br/basico"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 py-4 text-sm font-bold uppercase tracking-widest text-primary transition-all hover:bg-primary/10"
               >
                 Escolher Essencial
-              </button>
+              </a>
               
               <p className="mt-3 text-[10px] font-medium uppercase tracking-widest text-primary/70">
                 💡 O Kit Completo por R$ 29,90 é mais vantajoso
