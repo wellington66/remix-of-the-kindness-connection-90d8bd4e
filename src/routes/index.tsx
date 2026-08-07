@@ -682,12 +682,12 @@ function Hero() {
             </ul>
 
 
-            <div className="hidden flex-col gap-3 sm:flex">
+            <div id="cta-oferta" className="hidden flex-col gap-3 sm:flex">
               <a
-                href="#cta-oferta"
+                href="#comprar"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById("cta-oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
                 className="cta-hero group flex w-full flex-col items-center gap-0.5 rounded-full px-6 py-4 shadow-xl shadow-[color-mix(in_oklab,var(--primary)_35%,transparent)] sm:w-auto sm:px-10 text-center"
               >
