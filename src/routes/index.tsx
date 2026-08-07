@@ -1232,10 +1232,10 @@ function Comparison() {
             ))}
           </ul>
           <a
-            href="#cta-oferta"
+            href="#comprar"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("cta-oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+              document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
             className="cta-hero mt-8 flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-center text-sm font-bold uppercase tracking-wide"
           >
