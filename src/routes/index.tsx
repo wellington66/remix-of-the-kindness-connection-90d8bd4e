@@ -1684,7 +1684,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                 <p className="mt-3 font-serif text-5xl font-black leading-[0.95] tracking-tight text-cta sm:text-6xl">
                   por 6x de
                   <br />
-                  R$ 5,66
+                  R$ 8,89
                 </p>
 
                 <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground sm:text-base">
