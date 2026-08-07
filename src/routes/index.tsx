@@ -380,7 +380,7 @@ function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) =
         </h3>
         
         <p className="mt-4 text-sm text-muted-foreground px-2">
-          Por apenas <span className="font-bold text-foreground">mais R$ 2,00</span>, você garante o <strong>Kit Completo</strong> com mais de 250 receitas e todos os bônus exclusivos.
+          Por apenas <span className="font-bold text-foreground">mais R$ 7,10</span>, você garante o <strong>Kit Completo</strong> com mais de 250 receitas e todos os bônus exclusivos.
         </p>
         
         <div className="mt-8 space-y-3">
