@@ -682,12 +682,12 @@ function Hero() {
             </ul>
 
 
-            <div className="hidden flex-col gap-3 sm:flex">
+            <div id="cta-oferta" className="hidden flex-col gap-3 sm:flex">
               <a
-                href="#cta-oferta"
+                href="#comprar"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById("cta-oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
                 className="cta-hero group flex w-full flex-col items-center gap-0.5 rounded-full px-6 py-4 shadow-xl shadow-[color-mix(in_oklab,var(--primary)_35%,transparent)] sm:w-auto sm:px-10 text-center"
               >
@@ -726,10 +726,10 @@ function Hero() {
 
           <div className="mt-5 flex flex-col gap-3 sm:hidden">
             <a
-              href="#cta-oferta"
+              href="#comprar"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("cta-oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+                document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               className="cta-hero group flex w-full flex-col items-center gap-0.5 rounded-full px-6 py-4 text-center shadow-xl shadow-[color-mix(in_oklab,var(--primary)_35%,transparent)]"
             >
@@ -1232,10 +1232,10 @@ function Comparison() {
             ))}
           </ul>
           <a
-            href="#cta-oferta"
+            href="#comprar"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("cta-oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+              document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
             className="cta-hero mt-8 flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-center text-sm font-bold uppercase tracking-wide"
           >
@@ -1961,9 +1961,11 @@ function FooterCta() {
           </p>
         </div>
         <a
-          href={CHECKOUT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#comprar"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-8 py-5 text-sm font-semibold uppercase tracking-wide text-foreground transition-transform hover:scale-[1.02] md:justify-self-end"
         >
           Quero acessar agora
