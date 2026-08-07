@@ -150,15 +150,15 @@ function VideoSection() {
         <div className="mx-auto max-w-4xl">
           <div className="mb-10 text-center">
             <h2 className="mb-6 font-serif text-4xl italic leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
-              Descubra como ter as refeições do seu bebê <span className="not-italic font-bold text-primary">prontas para a semana toda</span>
+              Pare de perder tempo pensando no que <span className="not-italic font-bold text-primary">cozinhar para seu bebê todos os dias.</span>
             </h2>
             <div className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              <p>O método prático para mães que desejam oferecer uma introdução alimentar saudável, variada e segura, sem passar horas na cozinha todos os dias.</p>
+              <p>Descubra o método que já ajudou milhares de mães a preparar semanas inteiras de alimentação saudável em poucas horas, congelando tudo da forma correta.</p>
             </div>
             <div className="mt-4 font-medium text-primary uppercase tracking-widest text-xs sm:text-sm">
               <p>Menos tempo no fogão. Mais tempo de qualidade com seu bebê.</p>
               <div className="mt-2 block text-sm sm:text-base font-bold text-foreground bg-primary/10 px-4 py-1 rounded-full w-fit mx-auto shadow-sm">
-                Assista ao vídeo e veja como transformar sua rotina hoje.
+                Assista ao vídeo abaixo:
               </div>
             </div>
           </div>
