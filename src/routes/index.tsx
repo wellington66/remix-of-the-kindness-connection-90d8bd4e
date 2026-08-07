@@ -1688,7 +1688,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                 </p>
 
                 <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground sm:text-base">
-                  ou R$ 29,90 à vista
+                  ou R$ 47,00 à vista
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
