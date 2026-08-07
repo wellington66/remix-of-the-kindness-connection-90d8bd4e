@@ -1961,9 +1961,11 @@ function FooterCta() {
           </p>
         </div>
         <a
-          href={CHECKOUT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#comprar"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-8 py-5 text-sm font-semibold uppercase tracking-wide text-foreground transition-transform hover:scale-[1.02] md:justify-self-end"
         >
           Quero acessar agora
