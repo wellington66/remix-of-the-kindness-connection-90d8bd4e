@@ -71,9 +71,9 @@ const whatsappProofs: string[] = [
  ];
 
 // Links de checkout
-const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 29,90 (Completo)
-const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 19,90 (Básico)
-const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 21,90 (Upsell)
+const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 47,00 (Completo)
+const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 29,90 (Básico)
+const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 37,00 (Upsell/Pop-up)
 
 
 
@@ -256,7 +256,7 @@ function CaktoLinkSanitizer() {
 }
 
 
-// Link de checkout do pop-up de saída (R$ 21,90)
+// Link de checkout do pop-up de saída (R$ 37,00)
 const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/vxfqnzy";
 
 function ExitIntentPopup() {
@@ -322,7 +322,7 @@ function ExitIntentPopup() {
               OFERTA EXCLUSIVA DESTA SESSÃO
             </p>
             <p className="mt-3 font-serif text-4xl font-black leading-none text-cta">
-              R$ 21,90
+              R$ 37,00
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Pagamento único com desconto exclusivo antes de fechar esta página.
@@ -380,7 +380,7 @@ function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) =
         </h3>
         
         <p className="mt-4 text-sm text-muted-foreground px-2">
-          Por apenas <span className="font-bold text-foreground">mais R$ 2,00</span>, você garante o <strong>Kit Completo</strong> com mais de 250 receitas e todos os bônus exclusivos.
+          Por apenas <span className="font-bold text-foreground">mais R$ 7,10</span>, você garante o <strong>Kit Completo</strong> com mais de 250 receitas e todos os bônus exclusivos.
         </p>
         
         <div className="mt-8 space-y-3">
@@ -389,14 +389,14 @@ function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) =
             className="flex w-full flex-col items-center justify-center rounded-2xl bg-cta px-6 py-4 text-cta-foreground shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
           >
             <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-90">Opção Recomendada</span>
-            <span className="text-base font-black uppercase tracking-wider">Upgrade para Completo — R$ 21,90</span>
+            <span className="text-base font-black uppercase tracking-wider">Upgrade para Completo — R$ 37,00</span>
           </a>
           
           <a
             href={CHECKOUT_URL_BASIC}
             className="flex w-full items-center justify-center rounded-2xl border border-border bg-muted/30 px-6 py-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-muted/50"
           >
-            Não, prefiro o básico — R$ 19,90
+            Não, prefiro o básico — R$ 29,90
           </a>
         </div>
         
@@ -1570,7 +1570,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
             <div className="mt-auto pt-8 text-center">
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
-              <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 19,90</p>
+              <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 29,90</p>
               
               <div className="mt-2 flex flex-col items-center gap-1.5">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-destructive/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-destructive animate-pulse">
@@ -1587,7 +1587,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
               <div className="mt-3 flex flex-col items-center gap-1">
                 <p className="text-[10px] font-medium uppercase tracking-widest text-primary/70 italic">
-                  💡 O Kit Completo por R$ 29,90 é muito mais vantajoso
+                  💡 O Kit Completo por R$ 47,00 é muito mais vantajoso
                 </p>
                 <div className="animate-bounce text-primary/60">
                   <svg 
@@ -1637,7 +1637,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                   Valor real do pacote
                 </p>
                 <span className="rounded-full bg-cta px-3 py-1 text-[10px] font-black uppercase tracking-widest text-cta-foreground shadow-sm">
-                  Você economiza R$ {(totalValue - 29.9).toFixed(2).replace(".", ",")}
+                  Você economiza R$ {(totalValue - 47.0).toFixed(2).replace(".", ",")}
                 </span>
               </div>
 
@@ -1684,11 +1684,11 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                 <p className="mt-3 font-serif text-5xl font-black leading-[0.95] tracking-tight text-cta sm:text-6xl">
                   por 6x de
                   <br />
-                  R$ 5,66
+                  R$ 8,89
                 </p>
 
                 <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground sm:text-base">
-                  ou R$ 29,90 à vista
+                  ou R$ 47,00 à vista
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
