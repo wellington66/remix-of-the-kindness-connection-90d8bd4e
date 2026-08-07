@@ -1637,7 +1637,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                   Valor real do pacote
                 </p>
                 <span className="rounded-full bg-cta px-3 py-1 text-[10px] font-black uppercase tracking-widest text-cta-foreground shadow-sm">
-                  Você economiza R$ {(totalValue - 29.9).toFixed(2).replace(".", ",")}
+                  Você economiza R$ {(totalValue - 47.0).toFixed(2).replace(".", ",")}
                 </span>
               </div>
 
