@@ -256,7 +256,7 @@ function CaktoLinkSanitizer() {
 }
 
 
-// Link de checkout do pop-up de saída (R$ 21,90)
+// Link de checkout do pop-up de saída (R$ 37,00)
 const EXIT_CHECKOUT_URL = "https://pay.cakto.com.br/vxfqnzy";
 
 function ExitIntentPopup() {
