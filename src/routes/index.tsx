@@ -107,7 +107,7 @@ function Landing() {
   const [showUpsell, setShowUpsell] = useState(false);
 
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div className="min-h-dvh bg-[#FAF9F6] text-foreground">
       <AnnouncementBar />
       <Nav />
       <VideoSection />
@@ -145,7 +145,7 @@ function VideoSection() {
   }, []);
 
   return (
-    <section className="bg-secondary/20 py-10 sm:py-16">
+    <section className="py-10 sm:py-16">
       <div className="container-page">
         <div className="mx-auto max-w-4xl">
           <div className="mb-10 text-center">
@@ -836,7 +836,7 @@ function DailyMenu() {
   ];
 
   return (
-    <section className="container-page relative overflow-hidden border-y-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/60 to-background py-12 shadow-[0_28px_80px_-48px_rgba(76,56,38,0.55)] sm:rounded-[2.5rem] sm:border-2 sm:py-24">
+    <section className="container-page relative overflow-hidden py-12 sm:rounded-[2.5rem] sm:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <span className="inline-flex rounded-full border border-primary/25 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur">
           Praticidade Semanal
@@ -1035,7 +1035,7 @@ function Solution() {
   };
 
   return (
-    <section className="overflow-hidden border-y border-primary/10 bg-gradient-to-b from-secondary/60 via-background to-primary/5 py-14 sm:py-24">
+    <section className="overflow-hidden py-14 sm:py-24">
       <div className="container-page">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-end">
           <div>
@@ -1157,7 +1157,7 @@ function Comparison() {
     "Material digital com acesso vitalício",
   ];
   return (
-    <section className="bg-foreground py-14 text-background sm:py-24">
+    <section className="py-14 text-foreground sm:py-24">
       <div className="container-page">
       <div className="mx-auto max-w-4xl text-center">
         <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
@@ -1168,7 +1168,7 @@ function Comparison() {
           <br />
           <span className="italic text-primary">a diferença de seguir um método.</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-background/70 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           O NutriBaby reúne em um só lugar o que você precisa para planejar, preparar e acompanhar
           a introdução alimentar com mais clareza na rotina.
         </p>
@@ -1181,21 +1181,21 @@ function Comparison() {
           ["7 dias", "de cardápio"],
           ["Vitalício", "acesso ao guia"],
         ].map(([value, label]) => (
-          <div key={label} className="rounded-2xl border border-background/15 bg-background/5 p-4 text-center backdrop-blur">
+          <div key={label} className="rounded-2xl border border-border bg-card p-4 text-center">
             <p className="font-serif text-3xl text-primary sm:text-4xl">{value}</p>
-            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-background/60">{label}</p>
+            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
           </div>
         ))}
       </div>
 
       <div className="mx-auto mt-8 grid max-w-6xl gap-5 md:grid-cols-2">
-        <div className="rounded-[2rem] border border-background/15 bg-background/5 p-7 sm:p-9">
+        <div className="rounded-[2rem] border border-border bg-card p-7 sm:p-9">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background/10 text-lg text-background/70">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-lg text-muted-foreground">
               ✕
             </span>
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-background/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/60">
                 No improviso
               </p>
               <p className="font-serif text-2xl">Tudo depende de você lembrar e pesquisar</p>
@@ -1203,7 +1203,7 @@ function Comparison() {
           </div>
           <ul className="mt-6 space-y-3">
             {without.map((item) => (
-              <li key={item} className="flex gap-3 text-sm text-background/60">
+              <li key={item} className="flex gap-3 text-sm text-muted-foreground">
                 <span className="mt-1 text-destructive">✕</span>
                 <span className="line-through decoration-destructive/40">{item}</span>
               </li>
@@ -1297,7 +1297,7 @@ function WeeklyMeals() {
   ];
 
   return (
-    <section className="bg-muted/30 py-12 sm:py-20">
+    <section className="py-12 sm:py-20">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
@@ -1474,12 +1474,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
   const totalValue = 200; // 47+37+37+27+19+14+19
 
   return (
-    <section id="comprar" className="relative overflow-hidden bg-[#F1EEE3] py-14 sm:py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-24 top-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-16 bottom-10 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
-      </div>
-
+    <section id="comprar" className="relative overflow-hidden py-14 sm:py-24">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
@@ -1949,14 +1944,14 @@ function FAQ() {
 
 function FooterCta() {
   return (
-    <section className="border-y border-background/10 bg-foreground text-background">
+    <section className="py-10 sm:py-16 text-foreground">
       <div className="container-page grid gap-8 py-10 sm:py-16 md:grid-cols-[1.4fr_1fr] md:items-center">
         <div>
           <h3 className="font-serif text-4xl leading-tight sm:text-5xl">
             Comece hoje. <br className="hidden sm:block" />
             <span className="italic text-primary">Sirva com confiança amanhã.</span>
           </h3>
-          <p className="mt-4 max-w-lg text-background/70 text-lg leading-relaxed">
+          <p className="mt-4 max-w-lg text-muted-foreground text-lg leading-relaxed">
             Mais de 12.400 mães já trocaram as buscas no Google de madrugada por um cardápio pronto e a tranquilidade de saber o que fazer. Agora é a sua vez.
           </p>
         </div>
@@ -1966,7 +1961,7 @@ function FooterCta() {
             e.preventDefault();
             document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth", block: "start" });
           }}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-8 py-5 text-sm font-semibold uppercase tracking-wide text-foreground transition-transform hover:scale-[1.02] md:justify-self-end"
+          className="cta-hero inline-flex items-center justify-center gap-2 rounded-full px-8 py-5 text-sm font-semibold uppercase tracking-wide transition-transform hover:scale-[1.02] md:justify-self-end"
         >
           Quero acessar agora
           <ArrowRight className="h-4 w-4" />
