@@ -1297,7 +1297,7 @@ function WeeklyMeals() {
   ];
 
   return (
-    <section className="bg-muted/30 py-12 sm:py-20">
+    <section className="py-12 sm:py-20">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
