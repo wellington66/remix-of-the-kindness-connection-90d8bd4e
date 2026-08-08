@@ -1157,7 +1157,7 @@ function Comparison() {
     "Material digital com acesso vitalício",
   ];
   return (
-    <section className="bg-foreground py-14 text-background sm:py-24">
+    <section className="py-14 text-foreground sm:py-24">
       <div className="container-page">
       <div className="mx-auto max-w-4xl text-center">
         <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
