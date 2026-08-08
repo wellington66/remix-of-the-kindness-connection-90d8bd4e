@@ -35,7 +35,7 @@ const bookCardapio = { url: "/img/book-cardapio.png" };
 const bookLista = { url: "/img/book-lista.png" };
 const bookSeletividade = { url: "/img/book-seletividade.png" };
 const bookColecao = { url: "/img/colecao-guias.png" };
-import nutribabyMockup from "@/assets/nutribaby-mockup.png";
+import nutribabyMockup from "@/assets/product-kit.jpeg.asset.json";
 const whatsappProof4 = { url: "/img/prova-social-whatsapp-4.jpg" };
 const whatsappProof5 = { url: "/img/prova-social-whatsapp-5.jpg" };
 const whatsappProof6 = { url: "/img/prova-social-whatsapp-6.jpg" };
@@ -1518,9 +1518,9 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
         {/* Coleção completa — visual integrado à página */}
         <div className="mx-auto mt-12 max-w-5xl">
           <img
-            src={nutribabyMockup}
-            alt="NutriBaby — Guia Completo de Introdução Alimentar em todos os dispositivos"
-            className="mx-auto w-full max-w-4xl object-contain drop-shadow-2xl bg-muted/5"
+            src={nutribabyMockup.url}
+            alt="NutriBaby — Kit Completo de Introdução Alimentar"
+            className="mx-auto w-full max-w-4xl object-contain drop-shadow-2xl rounded-2xl"
             loading="lazy"
             decoding="async"
             width="896"
