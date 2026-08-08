@@ -107,7 +107,7 @@ function Landing() {
   const [showUpsell, setShowUpsell] = useState(false);
 
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div className="min-h-dvh bg-[#FAF9F6] text-foreground">
       <AnnouncementBar />
       <Nav />
       <VideoSection />
