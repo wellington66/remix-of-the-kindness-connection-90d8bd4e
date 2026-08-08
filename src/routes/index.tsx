@@ -1168,7 +1168,7 @@ function Comparison() {
           <br />
           <span className="italic text-primary">a diferença de seguir um método.</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-background/70 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           O NutriBaby reúne em um só lugar o que você precisa para planejar, preparar e acompanhar
           a introdução alimentar com mais clareza na rotina.
         </p>
@@ -1181,21 +1181,21 @@ function Comparison() {
           ["7 dias", "de cardápio"],
           ["Vitalício", "acesso ao guia"],
         ].map(([value, label]) => (
-          <div key={label} className="rounded-2xl border border-background/15 bg-background/5 p-4 text-center backdrop-blur">
+          <div key={label} className="rounded-2xl border border-border bg-card p-4 text-center">
             <p className="font-serif text-3xl text-primary sm:text-4xl">{value}</p>
-            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-background/60">{label}</p>
+            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
           </div>
         ))}
       </div>
 
       <div className="mx-auto mt-8 grid max-w-6xl gap-5 md:grid-cols-2">
-        <div className="rounded-[2rem] border border-background/15 bg-background/5 p-7 sm:p-9">
+        <div className="rounded-[2rem] border border-border bg-card p-7 sm:p-9">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background/10 text-lg text-background/70">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-lg text-muted-foreground">
               ✕
             </span>
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-background/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/60">
                 No improviso
               </p>
               <p className="font-serif text-2xl">Tudo depende de você lembrar e pesquisar</p>
@@ -1203,7 +1203,7 @@ function Comparison() {
           </div>
           <ul className="mt-6 space-y-3">
             {without.map((item) => (
-              <li key={item} className="flex gap-3 text-sm text-background/60">
+              <li key={item} className="flex gap-3 text-sm text-muted-foreground">
                 <span className="mt-1 text-destructive">✕</span>
                 <span className="line-through decoration-destructive/40">{item}</span>
               </li>
