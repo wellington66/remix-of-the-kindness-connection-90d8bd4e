@@ -1035,7 +1035,7 @@ function Solution() {
   };
 
   return (
-    <section className="overflow-hidden border-y border-primary/10 bg-gradient-to-b from-secondary/60 via-background to-primary/5 py-14 sm:py-24">
+    <section className="overflow-hidden py-14 sm:py-24">
       <div className="container-page">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-end">
           <div>
