@@ -1944,7 +1944,7 @@ function FAQ() {
 
 function FooterCta() {
   return (
-    <section className="border-y border-background/10 bg-foreground text-background">
+    <section className="py-10 sm:py-16 text-foreground">
       <div className="container-page grid gap-8 py-10 sm:py-16 md:grid-cols-[1.4fr_1fr] md:items-center">
         <div>
           <h3 className="font-serif text-4xl leading-tight sm:text-5xl">
