@@ -836,7 +836,7 @@ function DailyMenu() {
   ];
 
   return (
-    <section className="container-page relative overflow-hidden border-y-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/60 to-background py-12 shadow-[0_28px_80px_-48px_rgba(76,56,38,0.55)] sm:rounded-[2.5rem] sm:border-2 sm:py-24">
+    <section className="container-page relative overflow-hidden py-12 sm:rounded-[2.5rem] sm:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <span className="inline-flex rounded-full border border-primary/25 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur">
           Praticidade Semanal
