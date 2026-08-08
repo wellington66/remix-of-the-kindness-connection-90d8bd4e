@@ -1474,12 +1474,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
   const totalValue = 200; // 47+37+37+27+19+14+19
 
   return (
-    <section id="comprar" className="relative overflow-hidden bg-[#F1EEE3] py-14 sm:py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-24 top-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-16 bottom-10 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
-      </div>
-
+    <section id="comprar" className="relative overflow-hidden py-14 sm:py-24">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
