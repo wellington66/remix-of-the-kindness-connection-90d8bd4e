@@ -145,7 +145,7 @@ function VideoSection() {
   }, []);
 
   return (
-    <section className="bg-secondary/20 py-10 sm:py-16">
+    <section className="py-10 sm:py-16">
       <div className="container-page">
         <div className="mx-auto max-w-4xl">
           <div className="mb-10 text-center">
