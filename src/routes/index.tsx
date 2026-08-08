@@ -35,7 +35,7 @@ const bookCardapio = { url: "/img/book-cardapio.png" };
 const bookLista = { url: "/img/book-lista.png" };
 const bookSeletividade = { url: "/img/book-seletividade.png" };
 const bookColecao = { url: "/img/colecao-guias.png" };
-import nutribabyMockup from "@/assets/product-kit.jpeg.asset.json";
+const nutribabyMockup = { url: "/img/product-kit.jpeg" };
 const whatsappProof4 = { url: "/img/prova-social-whatsapp-4.jpg" };
 const whatsappProof5 = { url: "/img/prova-social-whatsapp-5.jpg" };
 const whatsappProof6 = { url: "/img/prova-social-whatsapp-6.jpg" };
