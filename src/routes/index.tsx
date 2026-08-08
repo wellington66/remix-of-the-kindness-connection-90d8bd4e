@@ -1951,7 +1951,7 @@ function FooterCta() {
             Comece hoje. <br className="hidden sm:block" />
             <span className="italic text-primary">Sirva com confiança amanhã.</span>
           </h3>
-          <p className="mt-4 max-w-lg text-background/70 text-lg leading-relaxed">
+          <p className="mt-4 max-w-lg text-muted-foreground text-lg leading-relaxed">
             Mais de 12.400 mães já trocaram as buscas no Google de madrugada por um cardápio pronto e a tranquilidade de saber o que fazer. Agora é a sua vez.
           </p>
         </div>
