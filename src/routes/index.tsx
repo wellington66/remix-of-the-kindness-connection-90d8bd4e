@@ -114,7 +114,7 @@ function Landing() {
       <Hero />
       <Pillars />
       <SocialProof />
-      <DailyMenu />
+      {/* DailyMenu removido conforme solicitação */}
       <Problem />
       <Solution />
       <Comparison />
