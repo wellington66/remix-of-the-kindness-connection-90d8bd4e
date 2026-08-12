@@ -108,6 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 const META_PIXEL_ID = "1739016234086373";
+const NEW_META_PIXEL_ID = "26073594652311587";
 const LOVABLE_TRACKER_SRC =
   "https://vamos-criativos-iniciar.lovable.app/api/public/track/js?k=ed3435a6-1e8a-4c4d-8915-af63ca54275b";
 
@@ -165,6 +166,7 @@ const bootstrapScript = `
   s.parentNode.insertBefore(t,s)}(window,document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   window.fbq('init','${META_PIXEL_ID}');
+  window.fbq('init','${NEW_META_PIXEL_ID}');
   window.fbq('track','PageView');
   // Lovable tracker
   var s=document.createElement('script');
@@ -202,6 +204,20 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${NEW_META_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+        </noscript>
       </body>
     </html>
   );
