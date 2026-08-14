@@ -141,7 +141,7 @@ const bootstrapScript = `
   if (p === '/membros' || p.indexOf('/membros/') === 0 || p === '/obrigado' || p.indexOf('/obrigado') === 0) return;
   // Bloqueia tracking em ambientes de preview/edição do Lovable.
   var h = window.location.hostname || '';
-  if (h.indexOf('id-preview-') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
+  if (h.indexOf('lovable.dev') !== -1 || h.indexOf('lovableproject.com') !== -1 || h.indexOf('id-preview') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
   if (window.__nbTrackingLoaded) return;
   window.__nbTrackingLoaded = true;
   // Meta Pixel
