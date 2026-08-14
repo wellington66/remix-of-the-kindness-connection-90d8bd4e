@@ -1684,11 +1684,11 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
                 <p className="mt-3 font-serif text-5xl font-black leading-[0.95] tracking-tight text-cta sm:text-6xl">
                   por 6x de
                   <br />
-                  R$ 8,89
+                  R$ 5,34
                 </p>
 
                 <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground sm:text-base">
-                  ou R$ 47,00 à vista
+                  ou R$ 29,90 à vista
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
