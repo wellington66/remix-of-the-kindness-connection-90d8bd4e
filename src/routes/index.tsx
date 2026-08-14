@@ -104,33 +104,39 @@ export const Route = createFileRoute("/")({
 });
 
 function Landing() {
-  const [showUpsell, setShowUpsell] = useState(false);
-
   return (
-    <div className="min-h-dvh bg-background text-foreground">
-      <AnnouncementBar />
-      <Nav />
-      <VideoSection />
-      <Hero />
-      <Pillars />
-      <SocialProof />
-      {/* DailyMenu removido conforme solicitação */}
-      <Problem />
-      <Solution />
-      <Comparison />
-      <WeeklyMeals />
-      <SocialProofCarousel />
-      <Offer onSelectBasic={() => setShowUpsell(true)} />
-      <Guarantee />
-      <FAQ />
-      <FooterCta />
-      <Footer />
-      
-      <PurchasePopup />
-      <ExitIntentPopup />
-      <UpsellModal open={showUpsell} setOpen={setShowUpsell} />
-      <StayGuard />
-      <CaktoLinkSanitizer />
+    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white p-6 text-center overflow-auto">
+      <div className="max-w-2xl w-full space-y-8 animate-in fade-in zoom-in duration-500">
+        <div className="mx-auto w-24 h-24 bg-red-50 rounded-full flex items-center justify-center shadow-sm mb-4">
+          <Shield className="w-12 h-12 text-red-600" />
+        </div>
+        
+        <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-none uppercase">
+          ESTA EXTENSÃO FOI PIRATEADA
+        </h1>
+        
+        <p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-xl mx-auto">
+          A chave utilizada nesta extensão foi bloqueada por uso não autorizado. Fale com o contato oficial abaixo para adquirir a versão original.
+        </p>
+
+        <div className="pt-8">
+          <a
+            href="https://wa.me/5591985837992"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-col items-center justify-center w-full sm:w-auto px-8 py-6 bg-slate-900 text-white rounded-2xl shadow-xl hover:bg-slate-800 transition-all active:scale-95 group"
+          >
+            <span className="text-sm font-bold uppercase tracking-widest opacity-70 mb-1 group-hover:opacity-100">Suporte Oficial</span>
+            <span className="text-lg md:text-xl font-black uppercase tracking-tight">
+              FALAR COM O CONTATO OFICIAL (91) 98583-7992 ou no botão abaixo
+            </span>
+          </a>
+        </div>
+        
+        <p className="text-slate-400 text-sm font-medium pt-12">
+          © 2026 Sistema de Segurança • Todos os direitos reservados.
+        </p>
+      </div>
     </div>
   );
 }
