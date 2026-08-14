@@ -147,14 +147,9 @@ const bootstrapScript = `
   if (typeof window === 'undefined') return;
   var p = window.location.pathname || '';
   if (p === '/membros' || p.indexOf('/membros/') === 0 || p === '/obrigado' || p.indexOf('/obrigado') === 0) return;
-  // Bloqueia tracking em ambientes de preview/edição do Lovable, inclusive quando
-  // a página publicada é aberta dentro/partindo do editor e chega com referrer Lovable.
+  // Bloqueia tracking em ambientes de preview/edição do Lovable.
   var h = window.location.hostname || '';
-  var r = document.referrer || '';
-  var ancestors = [];
-  try { ancestors = Array.prototype.slice.call(window.location.ancestorOrigins || []); } catch(e) {}
-  var inspected = [h, r].concat(ancestors).join(' ').toLowerCase();
-  if (h === 'localhost' || h === '127.0.0.1' || inspected.indexOf('lovable.dev') !== -1 || inspected.indexOf('lovableproject.com') !== -1 || inspected.indexOf('id-preview') !== -1 || inspected.indexOf('-dev.lovable.app') !== -1) return;
+  if (h.indexOf('id-preview-') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
   if (window.__nbTrackingLoaded) return;
   window.__nbTrackingLoaded = true;
   // Meta Pixel
