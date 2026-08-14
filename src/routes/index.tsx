@@ -322,7 +322,7 @@ function ExitIntentPopup() {
               OFERTA EXCLUSIVA DESTA SESSÃO
             </p>
             <p className="mt-3 font-serif text-4xl font-black leading-none text-cta">
-              R$ 37,00
+              R$ 24,90
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Pagamento único com desconto exclusivo antes de fechar esta página.
