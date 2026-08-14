@@ -190,8 +190,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: bootstrapScript }} />
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: bootstrapScript }} />
       </head>
       <body>
         {children}
