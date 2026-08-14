@@ -121,22 +121,14 @@ const isMembersPath = (p: string) =>
 
 const isLovableBuilderContext = () => {
   if (typeof window === "undefined") return true;
-
-  const hostname = window.location.hostname || "";
-  const referrer = document.referrer || "";
-  const ancestorOrigins = Array.from(window.location.ancestorOrigins ?? []);
-  const valuesToInspect = [hostname, referrer, ...ancestorOrigins].map((value) =>
-    value.toLowerCase(),
-  );
-
-  return valuesToInspect.some(
-    (value) =>
-      value === "localhost" ||
-      value === "127.0.0.1" ||
-      value.includes("lovable.dev") ||
-      value.includes("lovableproject.com") ||
-      value.includes("id-preview") ||
-      value.includes("-dev.lovable.app"),
+  const h = window.location.hostname || "";
+  return (
+    h.includes("lovable.dev") ||
+    h.includes("lovableproject.com") ||
+    h.includes("id-preview") ||
+    h.includes("-dev.lovable.app") ||
+    h === "localhost" ||
+    h === "127.0.0.1"
   );
 };
 
@@ -149,7 +141,7 @@ const bootstrapScript = `
   if (p === '/membros' || p.indexOf('/membros/') === 0 || p === '/obrigado' || p.indexOf('/obrigado') === 0) return;
   // Bloqueia tracking em ambientes de preview/edição do Lovable.
   var h = window.location.hostname || '';
-  if (h.indexOf('id-preview-') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
+  if (h.indexOf('lovable.dev') !== -1 || h.indexOf('lovableproject.com') !== -1 || h.indexOf('id-preview') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
   if (window.__nbTrackingLoaded) return;
   window.__nbTrackingLoaded = true;
   // Meta Pixel
