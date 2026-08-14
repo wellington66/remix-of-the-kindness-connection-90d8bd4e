@@ -121,14 +121,14 @@ const isMembersPath = (p: string) =>
 
 const isLovableBuilderContext = () => {
   if (typeof window === "undefined") return true;
-
-  const hostname = window.location.hostname || "";
+  const h = window.location.hostname || "";
   return (
-    hostname === "localhost" ||
-    hostname === "127.0.0.1" ||
-    hostname.includes("id-preview") ||
-    hostname.includes("-dev.lovable.app") ||
-    hostname.includes("lovableproject.com")
+    h.includes("lovable.dev") ||
+    h.includes("lovableproject.com") ||
+    h.includes("id-preview") ||
+    h.includes("-dev.lovable.app") ||
+    h === "localhost" ||
+    h === "127.0.0.1"
   );
 };
 
