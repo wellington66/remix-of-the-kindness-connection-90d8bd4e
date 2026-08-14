@@ -122,6 +122,8 @@ const isMembersPath = (p: string) =>
 const isLovableBuilderContext = () => {
   if (typeof window === "undefined") return true;
   const h = window.location.hostname || "";
+  // Bloqueia tracking explicitamente em domínios técnicos conhecidos.
+  // Permite em qualquer outro domínio (incluindo domínios customizados na Vercel).
   return (
     h.includes("lovable.dev") ||
     h.includes("lovableproject.com") ||
@@ -141,7 +143,8 @@ const bootstrapScript = `
   if (p === '/membros' || p.indexOf('/membros/') === 0 || p === '/obrigado' || p.indexOf('/obrigado') === 0) return;
   // Bloqueia tracking em ambientes de preview/edição do Lovable.
   var h = window.location.hostname || '';
-  if (h.indexOf('lovable.dev') !== -1 || h.indexOf('lovableproject.com') !== -1 || h.indexOf('id-preview') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1') return;
+  var isTech = h.indexOf('lovable.dev') !== -1 || h.indexOf('lovableproject.com') !== -1 || h.indexOf('id-preview') !== -1 || h.indexOf('-dev.lovable.app') !== -1 || h === 'localhost' || h === '127.0.0.1';
+  if (isTech) return;
   if (window.__nbTrackingLoaded) return;
   window.__nbTrackingLoaded = true;
   // Meta Pixel
