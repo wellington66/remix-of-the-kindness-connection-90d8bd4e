@@ -123,20 +123,12 @@ const isLovableBuilderContext = () => {
   if (typeof window === "undefined") return true;
 
   const hostname = window.location.hostname || "";
-  const referrer = document.referrer || "";
-  const ancestorOrigins = Array.from(window.location.ancestorOrigins ?? []);
-  const valuesToInspect = [hostname, referrer, ...ancestorOrigins].map((value) =>
-    value.toLowerCase(),
-  );
-
-  return valuesToInspect.some(
-    (value) =>
-      value === "localhost" ||
-      value === "127.0.0.1" ||
-      value.includes("lovable.dev") ||
-      value.includes("lovableproject.com") ||
-      value.includes("id-preview") ||
-      value.includes("-dev.lovable.app"),
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.includes("id-preview") ||
+    hostname.includes("-dev.lovable.app") ||
+    hostname.includes("lovableproject.com")
   );
 };
 
