@@ -122,6 +122,8 @@ const isMembersPath = (p: string) =>
 const isLovableBuilderContext = () => {
   if (typeof window === "undefined") return true;
   const h = window.location.hostname || "";
+  // Bloqueia tracking explicitamente em domínios técnicos conhecidos.
+  // Permite em qualquer outro domínio (incluindo domínios customizados na Vercel).
   return (
     h.includes("lovable.dev") ||
     h.includes("lovableproject.com") ||
