@@ -389,7 +389,7 @@ function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) =
             className="flex w-full flex-col items-center justify-center rounded-2xl bg-cta px-6 py-4 text-cta-foreground shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
           >
             <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-90">Opção Recomendada</span>
-            <span className="text-base font-black uppercase tracking-wider">Upgrade para Completo — R$ 37,00</span>
+            <span className="text-base font-black uppercase tracking-wider">Upgrade para Completo — R$ 23,90</span>
           </a>
           
           <a
