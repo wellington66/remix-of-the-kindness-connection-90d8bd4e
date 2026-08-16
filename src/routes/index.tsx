@@ -71,9 +71,9 @@ const whatsappProofs: string[] = [
  ];
 
 // Links de checkout
-const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 47,00 (Completo)
-const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 29,90 (Básico)
-const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 37,00 (Upsell/Pop-up)
+const CHECKOUT_URL = "https://pay.cakto.com.br/antx4kt_976228"; // R$ 27,90 (Completo)
+const CHECKOUT_URL_BASIC = "https://pay.cakto.com.br/395yy2x"; // R$ 17,90 (Básico)
+const CHECKOUT_URL_UPSELL = "https://pay.cakto.com.br/vxfqnzy"; // R$ 23,90 (Upsell/Pop-up)
 
 
 
