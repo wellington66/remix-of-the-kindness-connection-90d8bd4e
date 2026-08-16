@@ -1587,7 +1587,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
               <div className="mt-3 flex flex-col items-center gap-1">
                 <p className="text-[10px] font-medium uppercase tracking-widest text-primary/70 italic">
-                  💡 O Kit Completo por R$ 47,00 é muito mais vantajoso
+                  💡 O Kit Completo por R$ 27,90 é muito mais vantajoso
                 </p>
                 <div className="animate-bounce text-primary/60">
                   <svg 
