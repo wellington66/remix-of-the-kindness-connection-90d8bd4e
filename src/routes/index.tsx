@@ -396,7 +396,7 @@ function UpsellModal({ open, setOpen }: { open: boolean; setOpen: (o: boolean) =
             href={CHECKOUT_URL_BASIC}
             className="flex w-full items-center justify-center rounded-2xl border border-border bg-muted/30 px-6 py-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-muted/50"
           >
-            Não, prefiro o básico — R$ 29,90
+            Não, prefiro o básico — R$ 17,90
           </a>
         </div>
         
