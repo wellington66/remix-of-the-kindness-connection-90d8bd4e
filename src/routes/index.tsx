@@ -1570,7 +1570,7 @@ function Offer({ onSelectBasic }: { onSelectBasic: () => void }) {
 
             <div className="mt-auto pt-8 text-center">
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Investimento único</p>
-              <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 29,90</p>
+              <p className="mt-1 font-serif text-4xl font-black text-foreground">R$ 17,90</p>
               
               <div className="mt-2 flex flex-col items-center gap-1.5">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-destructive/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-destructive animate-pulse">
