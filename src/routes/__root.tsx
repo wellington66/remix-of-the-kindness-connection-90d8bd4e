@@ -252,6 +252,15 @@ function RootComponent() {
       return;
     }
 
+    // O script de bootstrap já dispara o PageView do carregamento inicial.
+    // Aqui disparamos apenas nas navegações client-side seguintes, evitando duplicidade.
+    const wv = w as typeof w & { __nbLastPageViewPath?: string };
+    if (wv.__nbLastPageViewPath === undefined) {
+      wv.__nbLastPageViewPath = pathname;
+      return;
+    }
+    if (wv.__nbLastPageViewPath === pathname) return;
+    wv.__nbLastPageViewPath = pathname;
     if (typeof w.fbq === "function") w.fbq("track", "PageView");
   }, [pathname]);
 
